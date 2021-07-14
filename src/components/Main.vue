@@ -42,6 +42,7 @@ export default {
             .container-inner {
                 display: flex;
                 flex-wrap: wrap;
+                padding: 50px 0;
             }
         }
     } 
