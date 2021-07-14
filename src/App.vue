@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Loader/>
     <Header/>
     <Main :response="response"/>
   </div>
@@ -9,12 +10,14 @@
 import axios from "axios";
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
+import Loader from "./components/Loader.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    Main
+    Main,
+    Loader
   },
   data: function () {
     return {
