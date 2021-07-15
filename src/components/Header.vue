@@ -5,8 +5,8 @@
         </div>
         <div class="select-box">
             <form>
-                <label for="genere">SELEZIONA UN GENERE MUSICALE:</label>
-                <select name="genere" id="genere" v-model="ricercaGenere">
+                <label>SELEZIONA UN GENERE MUSICALE:</label>
+                <select v-model="ricercaGenere">
                     <option v-for="(album, index) in response" :key="index">{{album.genre}}</option>
                 </select>
             </form>

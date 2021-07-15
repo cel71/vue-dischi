@@ -34,7 +34,8 @@ export default {
 
     .sfondo {
         background-color: rgb(30, 45, 59);
-
+        height: 100vh;
+    
         .albums-container {
             width: 1000px;
             margin: 0 auto;
