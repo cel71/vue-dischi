@@ -33,7 +33,7 @@ export default {
         .sfondo-album{
             background-color: rgb(46, 58, 70);
             width: 170px;
-            height: 295px;
+            height: 298px;
             margin: 8px 0;
             display: flex;
             flex-direction: column;

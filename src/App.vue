@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Loader/>
-    <Header/>
-    <Main :response="response"/>
+    <Loader v-if="response.length === 0"/>
+    <Header :response="response" @ricerca="ricercaGenere2"/>
+    <Main :response="genereAlbums"/>
   </div>
 </template>
 
@@ -22,14 +22,23 @@ export default {
   data: function () {
     return {
       response: [],
+      genereAlbums: []
     }
   },
   created () {
     axios.get("https://flynn.boolean.careers/exercises/api/array/music")
     .then ((result) => {
       this.response = result.data.response
+      this.ricercaGenere2 ("")
     })
   },
+  methods: {
+    ricercaGenere2 (ricercaGenere) {
+      this.genereAlbums = this.response.filter ((element) => {
+        return element.genre.includes (ricercaGenere);
+      })
+    }
+  }
 };
 </script>
 

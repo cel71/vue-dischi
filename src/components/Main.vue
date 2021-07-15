@@ -20,7 +20,7 @@ import Albums from "./Albums.vue";
 export default {
   name: "Main",
   components: {
-      Albums
+    Albums
   },
   props: {
     response: Array
